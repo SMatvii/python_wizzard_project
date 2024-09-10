@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    {% for date, events in iterable.items() %}
+        <h3>
+            {{ date }}
+        </h3>
+        {% for event in events %}
+        <div class="event">
+            {{ event }}
+        </div>
+        {% endfor %}
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,427 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+    --black: #333;
+    --white: #FFF;
+    --light-color: #666;
+    --main-color: #16d44f;
+}
+
+* {
+    font-family: "Rubik", sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: all .2s linear;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: medium;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    background-color: #f8f9fa;
+    z-index: 1000;
+}
+
+.header .logo {
+    font-size: 2rem;
+    color: var(--black);
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.header .logo span {
+    color: var(--main-color);
+    text-transform: capitalize;
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+    margin-bottom: 1rem;
+}
+
+.header .navbar a {
+    color: var(--black);
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    padding: 1rem;
+}
+
+.header .navbar a:hover {
+    color: var(--white);
+    background-color: var(--main-color);
+}
+
+.header .icon {
+    background-color: var(--main-color);
+    padding: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .icon i {
+    color: var(--white);
+    font-size: medium;
+}
+
+.header .icon i:hover {
+    cursor: pointer;
+    background-color: var(--black);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 5%;
+    gap: 2rem;
+}
+
+.main .image img {
+    height: 50rem;
+    width: 30rem;
+    object-fit: cover;
+}
+
+.main .product {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.main .product h1 {
+    font-size: xx-large;
+    color: var(--black);
+    margin-bottom: 2rem;
+}
+
+.main .product h1 span {
+    color: var(--main-color);
+}
+
+.main .product p {
+    color: var(--light-color);
+    line-height: 2rem;
+    font-size: 1.3rem;
+    text-transform: lowercase;
+    width: 40rem;
+}
+
+.main .product .btn {
+    color: var(--white);
+    background-color: var(--main-color);
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin: 1rem 0;
+    box-shadow: 1rem 5rem 3rem #999999;
+    border: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main .product .btn:hover {
+    background-color: var(--black);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+}
+
+.new {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.new .head h3 {
+    font-size: medium;
+    color: var(--black);
+    text-transform: capitalize;
+}
+
+.new .head p {
+    font-size: medium;
+    color: #666;
+    text-transform: lowercase;
+    line-height: medium;
+}
+
+.new .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+}
+
+.new .box-container .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease-in-out;
+}
+
+.new .box-container .box:hover {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+    border-color: #007bff;
+}
+
+.new .box-container .box img {
+    height: 10rem;
+    width: 15rem;
+    object-fit: cover;
+}
+
+.new .box-container .box h3 {
+    font-size: medium;
+    color: var(--black);
+    text-transform: uppercase;
+}
+
+.new .box-container .box p {
+    font-size: medium;
+    color: var(--light-color);
+    text-transform: lowercase;
+    margin: 1rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+.new .box-container .box .stars i {
+    color: #16d44f;
+    font-size: 1rem;
+    margin: 0 .5rem;
+}
+
+.new .box-container .box .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.new .box-container .box .flex .btn {
+    background-color: var(--main-color);
+    color: var(--white);
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+.new .box-container .box .flex .btn:hover {
+    background-color: var(--black);
+    border-radius: 0.5rem;
+}
+
+.new .box-container .box .flex span {
+    color: var(--black);
+    font-size: 1.5rem;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.product-card {
+    flex: 1 1 calc(33.333% - 1rem);
+    box-sizing: border-box;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.25rem;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: var(--light-color);
+    margin-bottom: 1rem;
+}
+
+.product-card .btn {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: var(--main-color);
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.product-card .btn:hover {
+    background-color: var(--black);
+}
+
+.product-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.box {
+    flex: 1 1 calc(33.333% - 1rem);
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    border: 2px solid transparent;
+    padding: 1rem;
+    position: relative;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+}
+
+.box:hover {
+    border-color: #007bff;
+    animation: borderAnimation 0.5s ease-in-out;
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #007bff;
+    }
+    100% {
+        border-color: #007bff;
+    }
+}
+
+.btn {
+    background-color: transparent;
+    color: inherit;
+}
+
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+    border: none !important;
+    background-color: #90ee90 !important;
+    color: #000 !important;
+    transition: background-color 0.3s ease;
+    outline: none !important;
+}
+
+.btn-primary:focus, .btn-primary:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn-primary::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: width 0.3s ease, height 0.3s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.btn-primary:hover::before {
+    width: 0;
+    height: 0;
+}
+
+.btn-primary:hover {
+    background-color: #76c7c0;
+    color: #fff;
+}
+
+.btn-primary span {
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.other_logo {
+    width: 1590px;
+    height: 12;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-container input {
+    width: 50px;
+    text-align: center;
+}
+
+.quantity-container button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    padding: 0;
+}
+
+.total-price {
+    font-weight: bold;
+}
+
+.empty-cart-message {
+    text-align: center;
+    margin-top: 20px;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cushy Online Shopping</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/pay.css">
+</head>
+
+<body>
+
+    <div class="vm">
+        <div class="payment">
+            <div class="payment-logo">
+                <img src="/static/logo/IMG_6950.PNG" alt="Cushy Pay Logo" class="img-fluid">
+            </div>
+            
+            <h2 class="text-center">Оформлення Замовлення</h2>
+            <div class="card-body">
+                <form id="payment-form">
+                    <h4>Оплата карткою</h4>
+
+                    <div class="form-group position-relative">
+                        <label class="label">Тип картки:</label>
+                        <div style="display: flex; align-items: center;">
+                            <select name="card_type" class="form-control" id="card_type" style="flex-grow: 1;">
+                                <option value="visa" data-logo="https://i.pinimg.com/564x/b6/43/2f/b6432f4ed843becbfde21aa9bee5cab7.jpg">Visa</option>
+                                <option value="mastercard" data-logo="https://i.pinimg.com/564x/be/f1/bc/bef1bca7bb930f868c679a5c6b37056a.jpg">MasterCard</option>
+                            </select>
+                            <div id="card_logo" style="display: inline-block; margin-left: 10px;">
+                                <img src="" alt="Card Logo" id="card_logo_img" class="img-fluid" style="width: 50px; height: auto;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group position-relative">
+                        <label class="label">Ім'я та прізвище:</label>
+                        <input type="text" class="form-control" name="name" placeholder="Ім'я та прізвище" required>
+                        <i class="fas fa-user position-absolute" style="right: 10px; top: 40px;"></i>
+                    </div>
+
+                    <div class="form-group position-relative">
+                        <label class="label">Місто:</label>
+                        <input type="text" class="form-control" name="city" placeholder="Місто" required>
+                        <i class="fas fa-city position-absolute" style="right: 10px; top: 40px;"></i>
+                    </div>
+                    
+                    <div class="form-group position-relative mt-3">
+                        <label class="label">Вулиця:</label>
+                        <input type="text" class="form-control" name="street" placeholder="Вулиця" required>
+                        <i class="fas fa-map-signs position-absolute" style="right: 10px; top: 40px;"></i>
+                    </div>
+
+                    <div class="form-group position-relative phone-container">
+                        <label class="label">Номер телефону:</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="+380 00 000 00 00" maxlength="16" required>
+                        <i class="fas fa-phone position-absolute" style="right: 10px; top: 40px;"></i>
+                    </div>                       
+                    
+                    <div class="form-group position-relative">
+                        <label class="label">Номер карти:</label>
+                        <input type="text" class="form-control" name="card_number" data-mask="0000 0000 0000 0000" placeholder="0000 0000 0000 0000" required>
+                        <i class="far fa-credit-card position-absolute" style="right: 10px; top: 40px;"></i>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6 position-relative">
+                            <label class="label">Срок дії:</label>
+                            <input type="text" name="expiry_data" class="form-control" data-mask="00 / 00" placeholder="00 / 00" required>
+                            <i class="far fa-calendar-alt position-absolute" style="right: 10px; top: 40px;"></i>
+                        </div>
+                        <div class="form-group col-md-6 position-relative">
+                            <label class="label">CVC:</label>
+                            <input type="text" class="form-control" name="cvc" data-mask="000" placeholder="000" required>
+                            <i class="fas fa-lock position-absolute" style="right: 10px; top: 40px;"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="label">Сума до сплати:</label>
+                        <p class="form-control-plaintext"><b>{{ total_amount }} ₴</b></p>
+                    </div>
+
+                    <button type="button" class="btn btn-primary btn-block" id="verify-button">Перевірити форму</button>
+                    <a href="{{ url_for('card_pay') }}" class="btn btn-success btn-block fade-in" id="submit-button" style="display:none;">Оформити замовлення</a>
+
+                </form>
+                <a href="{{ url_for('cart') }}" class="btn btn-secondary btn-block mt-2">Повернутись назад</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/static/js/pay.js"></script>
+</body>
+</html>

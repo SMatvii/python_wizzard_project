@@ -1,0 +1,41 @@
+<nav class="navbar">
+    <div class="menu-logo-container">
+        <div class="darkLight-searchBox">
+            <button id="toggleButton" class="menu-button">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </button>
+        </div>
+        <img src="/static/logo/1.png" alt="Logo" class="logo">
+    </div>
+
+    <div class="icon-container">
+        <div class="darkLight-searchBox"></div>
+        <a href="{{ url_for('cart') }}" class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+        <div id="gearIcon">
+            <div class="icon">
+                <i class="fa fa-cog"></i>
+            </div>
+        </div>
+    </div>
+    </div>
+</nav>
+
+<div id="sidebar" class="sidebar">
+    <div class="sidebar-content">
+        <a href="{{ url_for('home') }}" class="nav-link"><b>Головна</b></a>
+        <a href="{{ url_for('products') }}" class="nav-link"><b>Асортимент</b></a>
+    </div>
+</div>
+
+<div id="gearPopup" class="gear-popup">
+    <div class="gear-popup-content">
+        <a href="{{ url_for('register') }}" class="nav-link">Реєстрація</a>
+        <a href="{{ url_for('login') }}" class="nav-link">війти в аккаунт</a>
+    </div>
+</div>
+
+<div id="overlay" class="overlay"></div>

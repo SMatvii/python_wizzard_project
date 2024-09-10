@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% from '_helpers.html' import form_generate %}
+{% block main %}
+    <div class="container">
+        <h2>{{ form.title }}</h2>
+        {{ form_generate(form) }}
+    </div>
+{% endblock %}
